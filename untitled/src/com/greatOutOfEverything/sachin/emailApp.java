@@ -22,16 +22,15 @@ public emailApp(String firstName,String lastName){
     //Generate a password
 
     this.password = randomPassword(defaultPasswordlength);
-    System.out.println("Your password is"+ this.password);
 
     //call a method asking for the department
 
     this.department=setDepartment();
-    System.out.println(firstName+" "+lastName +" has been with the "+"Department that is "+this.department);
+
 
     //Make a email generating function
     email=firstName.toLowerCase()+"."+lastName.toLowerCase()+"@"+department+"."+companySuffux+".com";
-    System.out.println("Your email is :"+ email);
+
 }
 
     //Ask for the department
@@ -82,6 +81,10 @@ public emailApp(String firstName,String lastName){
     public String getPassword(){
     return password;
     }
-
+    public String showInfo(){
+        return "DISPLAY NAME :"+ firstName+""+lastName +"\n"+
+                "COMPANY EMAIL :"+email +"\n"+
+                "MAIL-BOX CAPACITY :"+mailboxCapacity+"mb";
+    }
 
 }
